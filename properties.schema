@@ -32,11 +32,11 @@
                 "_isEnabled": {
                   "type": "boolean",
                   "required": true,
-                  "title": "Enable Glossary",
+                  "title": "Is enabled",
                   "default": false,
-                  "inputType": {"type": "Boolean", "options": [false, true]},
+                  "inputType": "Checkbox",
                   "validators": [],
-                  "help": "If set to 'true', the glossary extension will be enabled"
+                  "help": "If enabled, the glossary extension will be enabled"
                 },
                 "_drawerOrder": {
                   "type": "number",
@@ -50,7 +50,7 @@
                 "title": {
                   "type": "string",
                   "required": true,
-                  "default": "Glossary",
+                  "default": "",
                   "title": "Glossary title",
                   "inputType": "Text",
                   "validators": [],
@@ -60,17 +60,26 @@
                 "description": {
                   "type": "string",
                   "required": true,
-                  "default": "Select here to view the glossary for this course",
+                  "default": "",
                   "title": "Glossary description",
                   "inputType": "Text",
                   "validators": [],
                   "help": "Some text to describe the glossary",
                   "translatable": true
                 },
+                "_searchEnabled": {
+                  "type": "boolean",
+                  "required": false,
+                  "title": "Search is enabled",
+                  "default": false,
+                  "inputType": "Checkbox",
+                  "validators": [],
+                  "help": "If enabled, the search within the glossary feature will be enabled"
+                },
                 "clearSearch": {
                   "type": "string",
-                  "required": true,
-                  "default": "Clear search",
+                  "required": false,
+                  "default": "",
                   "title": "Clear search text",
                   "inputType": "Text",
                   "validators": [],
@@ -79,8 +88,8 @@
                 },
                 "searchItemsAlert": {
                   "type": "string",
-                  "required": true,
-                  "default": "{{filteredItems.length}} found",
+                  "required": false,
+                  "default": "{{filteredItems.length}} found.",
                   "title": "Search result alert",
                   "inputType": "Text",
                   "validators": [],
@@ -89,8 +98,8 @@
                 },
                 "searchPlaceholder": {
                   "type": "string",
-                  "required": true,
-                  "default": "Search",
+                  "required": false,
+                  "default": "",
                   "title": "Search placeholder text",
                   "inputType": "Text",
                   "validators": [],
@@ -99,8 +108,8 @@
                 },
                 "searchWithInDescriptionLabel": {
                   "type": "string",
-                  "required": true,
-                  "default": "Search within Description",
+                  "required": false,
+                  "default": "",
                   "title": "Search within description text",
                   "inputType": "Text",
                   "validators": [],
@@ -122,7 +131,8 @@
                   "required": true,
                   "title": "Glossary items",
                   "minItems": 1,
-                  "items": {
+                  "items":
+                  {
                     "type": "object",
                     "required": true,
                     "properties": {

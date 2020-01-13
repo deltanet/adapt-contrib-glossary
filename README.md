@@ -2,7 +2,7 @@
 
 **Glossary** is an *extension* for the [Adapt framework](https://github.com/adaptlearning/adapt_framework).
 
-<img src="https://github.com/adaptlearning/documentation/blob/master/04_wiki_assets/plug-ins/images/glossary.gif" width='548' height='497' alt="demonstration of how the glossary looks and functions" align="right"> 
+<img src="https://github.com/adaptlearning/documentation/blob/master/04_wiki_assets/plug-ins/images/glossary.gif" width='548' height='497' alt="demonstration of how the glossary looks and functions" align="right">
 
 This extension allows for a list of glossary terms to be displayed (in alphabetical order) in the 'drawer' of the course. The terms can be clicked to reveal a definition. The list of terms is searchable and terms can be linked to from the content.
 <br><br><br><br><br><br><br><br><br><br><br><br><br>
@@ -15,7 +15,6 @@ First, be sure to install the [Adapt Command Line Interface](https://github.com/
 This extension can also be installed by adding the extension to the adapt.json file before running `adapt install`:
 
         "adapt-contrib-glossary": "*"
-
 ## Usage
 You can create links to items in the glossary in the format `<a href='#' data-glossaryterm='About Framework'>Adapt Framework</a>`. You should avoid doing this in text that will be displayed within a Notify popup (e.g. question feedback) as the Glossary will open behind the Notify popup.
 
@@ -29,6 +28,9 @@ For example JSON format, see [example.json](example.json). Further details are g
     "_drawerOrder": 1,
     "title": "Glossary",
     "description": "Click here to view glossary for this course",
+    "_searchEnabled": true,
+    "searchItemsAlert": "{{filteredItems.length}} found.",
+    "clearSearch": "Clear search",
     "searchPlaceholder": "Search",
     "searchWithInDescriptionLabel": "Search within Description",
     "itemNotFoundMessage": "Sorry! No results to display",
@@ -66,16 +68,9 @@ For example JSON format, see [example.json](example.json). Further details are g
 </table>
 
 ## Limitations
- 
+
 To be completed.
 
 ## Browser spec
 
 This extension has been tested to the standard Adapt browser specification.
-
-**Version number:**  3.0.0   <a href="https://community.adaptlearning.org/" target="_blank"><img src="https://github.com/adaptlearning/documentation/blob/master/04_wiki_assets/plug-ins/images/adapt-logo-mrgn-lft.jpg" alt="adapt learning logo" align="right"></a>  
-**Framework versions:**  5+  
-**Author / maintainer:** Adapt Core Team with [contributors](https://github.com/adaptlearning/adapt-contrib-glossary/graphs/contributors)  
-**Accessibility support:** WAI AA  
-**RTL support:** Yes  
-**Cross-platform coverage:** Chrome, Chrome for Android, Firefox (ESR + latest version), Edge, IE11, Safari 12+13 for macOS/iOS/iPadOS, Opera  
